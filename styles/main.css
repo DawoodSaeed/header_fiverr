@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: #ddd; /* Replace with your desired border color */
+  --icon-color: #9c9b9b; /* Replace with your desired icon color */
+  --btn-color: #7a1d17; /* Replace with your desired button color */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: #eee;
+  overflow-x: hidden;
+}
+
+/*  Main menu */
+.main-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 20px;
+  background-color: #fff;
+  height: 20vh;
+}
+
+/* Top Menu */
+.main-menu .menu-top,
+.main-menu .menu-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Top menu => right / Left common style; */
+.menu-top__right,
+.menu-top__left {
+  display: flex;
+  align-items: center;
+}
+
+/* Top Menu => Left Side; */
+.menu-top__left {
+  flex: 0.7;
+}
+
+.menu-top__left > div {
+  margin: 0px 10px;
+}
+
+/* Top Menu => Right Side; */
+.menu-top__right {
+  flex: 0.3;
+}
+
+.menu-top__right > div {
+  margin-left: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Menu Bottom */
+
+.menu-bottom {
+  position: absolute;
+  bottom: 15px;
+  left: 0px;
+  padding: 0px 20px;
+}
+.menu-left {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+}
+
+.menu-left > div {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.menu-right {
+  flex: 0.2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/*  #################### MAIN-CONTENT ################### */
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.main-content {
+  width: 100%;
+  height: 100%;
+  background-color: #7a1d17;
+  background: url("../images/background_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: scaleImage 2s ease-in-out forwards;
+}
+
+/* Background image animation; */
+@keyframes scaleImage {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
+}
+
+/* Utility classes */
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-size {
+  width: 350px;
+  height: 200px;
+}
+.border-gray {
+  border: 2px solid var(--border-color);
+}
+
+.icon-color {
+  color: var(--icon-color);
+}
+
+.btn-primary {
+  background: var(--btn-color);
+  color: #fff;
+  padding: 6px 10px !important;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Dropdown styling; */
+.dropdown {
+  position: relative;
+}
+
+.dropdown > .dropdown-options {
+  position: absolute;
+  top: 110%;
+  background-color: #fff;
+  display: none;
+  z-index: 1000;
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* max-width: 250px; */
+  width: 100%;
+  left: -1px;
+  min-width: 200px;
+}
+
+.dropdown > .dropdown-options a {
+  transition: all 0.2s ease-out;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Since I don't want on the last (a) of the dropdown */
+.dropdown > .dropdown-options a:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown > .dropdown-options > a:hover {
+  color: var(--btn-color);
+}
+
+/* When someone hover over the dropdown the dropdown options appears */
+.dropdown:hover > .dropdown-options {
+  display: block;
+}
+
+/* Large Dropdown */
+
+.dropdown_w100 > .dropdown-options__w100 {
+  width: 90vw;
+  /* display: flex; */
+  justify-content: space-around;
+  padding: 10px 40px;
+}
+
+.dropdown_w100:hover > .dropdown-options__w100 {
+  display: flex;
+}
+
+.dropdown-options__w100 > div {
+  flex: 1;
+}
+.dropdown-options__w100-second {
+  border-right: 2px solid var(--border-color);
+}
+.dropdown-options__w100-second div {
+  margin: 15px 10px;
+  padding-bottom: 10px;
+}
