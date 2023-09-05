@@ -15,19 +15,29 @@
     />
     <!-- stylesheet file -->
     <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- Script -->
+    <script src="scripts/main.js" defer></script>
   </head>
   <body>
     <div class="main-menu">
       <div class="menu-top">
         <!-- Logo, Title, about us, loations, de , search icon, login Btn -->
         <div class="menu-top__left">
-          <div><h1>CONSULTING</h1></div>
-          <div><h4 class="hover-title">GLOBAL</h4></div>
+          <div class="logoDiv">
+            <!-- <h1>CONSULTING</h1> -->
+            <img src="images/logo.jpeg" alt="Logo Image" class="logoImage" />
+          </div>
+          <div class="d-none_small_screen">
+            <p class="hover-title">Global</p>
+          </div>
         </div>
 
         <div class="menu-top__right">
-          <div class="border-gray dropdown">
-            <p>About Us <i class="fa-solid fa-caret-down icon-color"></i></p>
+          <div class="border-gray dropdown d-none_small_screen">
+            <span
+              >About Us <i class="fa-solid fa-caret-down icon-color"></i
+            ></span>
 
             <div class="dropdown-options">
               <a href="">Option # 1 </a>
@@ -35,30 +45,165 @@
               <a href="">Option # 3 </a>
             </div>
           </div>
-          <div class="border-gray">Locations</div>
-          <div class="border-gray">DE</div>
-          <div class="border-gray">
-            <i class="fa-solid fa-magnifying-glass icon-color"></i>
+          <div class="border-gray d-none_small_screen">
+            <span>Locations</span>
+          </div>
+          <div class="border-gray d-none_small_screen"><span>DE</span></div>
+          <div class="border-gray searchBtn">
+            <span><i class="fa-solid fa-magnifying-glass icon-color"></i></span>
           </div>
           <div class="btn-primary">
-            <p>
-              <i class="fa-solid fa-arrow-right-to-bracket"></i>
-              LOGIN
-            </p>
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <span class="fontSize_smallScreen"> LOGIN </span>
           </div>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+
+      <div style="width: 100%; justify-content: center" class="searchRow close">
+        <div class="searchBox">
+          <input type="text" placeholder="Search" class="searchBoxInput" />
+
+          <i class="fa-solid fa-magnifying-glass searchBoxIcon"></i>
+        </div>
+      </div>
+
+      <div class="menu-bottom_smallScreen mt-2">
+        <i class="fa-solid fa-bars"></i>
+        <div class="ml-1">
+          <p class="small_hover-title">Global</p>
         </div>
       </div>
       <div class="menu-bottom">
         <div class="menu-left">
-          <div class="dropdown dropdown_w100">
-            Consulting <i class="fa-solid fa-caret-down icon-color"></i>
+          <div class="dropdown_full">
+            <span>Consulting</span>
+            <i class="fa-solid fa-caret-down icon-color"></i>
 
-            <div class="dropdown-options dropdown-options__w100">
+            <div class="dropdown-options dropdown-flex-hovered w-50">
               <div class="dropdown-options__w100-first">
                 <img
                   src="images/expertise_image.jpg"
                   alt="Consulting Image"
                   class="image-size"
+                />
+                <p class="mt-2 w-65">
+                  We support companies and top executives with extensive
+                  competence in business models, organizational structures,
+                  processes and systems to successfully align their
+                  organizations for the future – across whole companies
+                </p>
+
+                <h3 class="mt-3 row">
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                  <a href="" class="ml-1">Explore More</a>
+                </h3>
+              </div>
+              <div class="dropdown-options__w100-second"></div>
+              <div class="dropdown-options__w100-third"></div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <span>Personal Excellence</span>
+            <i class="fa-solid fa-caret-down icon-color"></i>
+
+            <div class="dropdown-options dropdown-flex-hovered w-50">
+              <div class="ml-3">
+                <h3 class="border-bottom">Fur Unternehmen</h3>
+                <p class="hover"><a href="">Ubersicht</a></p>
+                <p class="hover"><a href="">Executive Search</a></p>
+                <p class="hover"><a href="">Kandidatensuche</a></p>
+              </div>
+
+              <div class="ml-3">
+                <h3 class="border-bottom">Fur Bewerber</h3>
+                <p class="hover"><a href="">Ubersicht</a></p>
+                <p class="hover"><a href="">initiativbewerbung</a></p>
+                <p class="hover">
+                  <a href="">Executive Search fur Fuhrungskrafte</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown_full">
+            <span>Interim Management</span>
+            <i class="fa-solid fa-caret-down icon-color"></i>
+            <div class="dropdown-options dropdown-flex-hovered w-50">
+              <div class="ml-3">
+                <h3 class="border-bottom">General Management</h3>
+                <p class="hover"><a href="">Interim CEO</a></p>
+                <p class="hover"><a href="">Interim COO</a></p>
+                <p class="hover"><a href="">Interim CDO</a></p>
+                <p class="hover"><a href="">Interim CRO</a></p>
+                <p class="hover"><a href="">Interim CFO</a></p>
+                <p class="hover"><a href="">Interim Legal & Compilance</a></p>
+              </div>
+
+              <div class="ml-3">
+                <h3 class="border-bottom">Operations</h3>
+                <p class="hover"><a href="">Interim Manager Purchasing</a></p>
+                <p class="hover">
+                  <a href="">Interim Manager Supply Chain Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager IT Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager Distribution & Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager Quality Management</a>
+                </p>
+                <p class="hover">
+                  <a href=""
+                    >Interim Manager Produktionsleitung & Werksleitung</a
+                  >
+                </p>
+              </div>
+
+              <div class="ml-3">
+                <h3 class="border-bottom">Peronal (HR)</h3>
+                <p class="hover"><a href="">Interim HR Management</a></p>
+                <p class="hover"><a href="">Interim Recruitment</a></p>
+                <p class="hover"><a href="">HR Bussiness Patner</a></p>
+                <p class="hover"><a href="">HR-development & Coaching</a></p>
+                <p class="hover"><a href="">HR Strategies & Consulting</a></p>
+                <p class="hover"><a href="">Interim Manager Payroll</a></p>
+              </div>
+
+              <div class="ml-3">
+                <h3 class="border-bottom">Finance</h3>
+                <p class="hover">
+                  <a href="">Interim Management Controlling</a>
+                </p>
+                <p class="hover"><a href="">Interim Manager Treasury</a></p>
+                <p class="hover">
+                  <a href="">Interim Manager Rechnungswesen</a>
+                </p>
+
+                <h3 class="border-bottom mt-2">Sales & Management</h3>
+                <p class="hover">
+                  <a href="">Interim Management Marketing</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager Sales & vertrieb</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager Corporate Communication</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown_full">
+            <span>Industries</span>
+            <i class="fa-solid fa-caret-down icon-color"></i>
+            <div class="dropdown-options dropdown-flex-hovered">
+              <div class="ml-3" style="flex: 1.5">
+                <img
+                  src="images/expertise_image.jpg"
+                  alt="Consulting Image"
+                  style="width: 250px; height: 150px"
                 />
                 <p class="mt-2">
                   We support companies and top executives with extensive
@@ -66,67 +211,581 @@
                   processes and systems to successfully align their
                   organizations for the future – across whole companies
                 </p>
-              </div>
-              <div class="dropdown-options__w100-second">
-                <div class="row">
-                  <p>Strategy & Innovation</p>
-                  <i class="fa-solid fa-arrow-right icon-color"></i>
-                </div>
 
-                <div class="row">
-                  <p>Organization,People & Change</p>
-                  <i class="fa-solid fa-arrow-right icon-color"></i>
-                </div>
-                <div class="row">
-                  <p>Sales, Service, Marketing & Price</p>
-                  <i class="fa-solid fa-arrow-right icon-color"></i>
-                </div>
-                <div class="row">
-                  <p>Production,Supply Chain, R&D und Procurement</p>
-                  <i class="fa-solid fa-arrow-right icon-color"></i>
-                </div>
-                <div class="row">
-                  <p>Finance Transformation</p>
-                  <i class="fa-solid fa-arrow-right icon-color"></i>
-                </div>
-                <div class="row">
-                  <p>Controlling, Performance Management, Risk & Compilance</p>
-                  <i class="fa-solid fa-arrow-right icon-color"></i>
-                </div>
-
-                <div class="row">
-                  <p>Sustainability & Green</p>
-                  <i class="fa-solid fa-arrow-right icon-color"></i>
-                </div>
-                <div class="row">
-                  <p>IT,Digital, Data & Analytics</p>
-                  <i class="fa-solid fa-arrow-right icon-color"></i>
-                </div>
+                <h3 class="mt-3 row">
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                  <a href="" class="ml-1">Explore More</a>
+                </h3>
               </div>
-              <div class="dropdown-options__w100-third">Column # 3</div>
+
+              <div class="ml-3">
+                <p class="hover"><a href="">Automotive</a></p>
+                <p class="hover"><a href="">Aviation</a></p>
+                <p class="hover">
+                  <a href="">Banken und Finanzdienstleister</a>
+                </p>
+                <p class="hover">
+                  <a href="">Building & Constructions</a>
+                </p>
+
+                <p class="hover">
+                  <a href="">Chemicals</a>
+                </p>
+
+                <p class="hover">
+                  <a href="">Consumer Electronics & High Tech</a>
+                </p>
+
+                <p class="hover">
+                  <a href="">Consumer Goods</a>
+                </p>
+
+                <p class="hover">
+                  <a href="">Health Care</a>
+                </p>
+              </div>
+
+              <div class="ml-3">
+                <p class="hover"><a href="">Industrial Services</a></p>
+                <p class="hover">
+                  <a href="">Industrial Goods & Machine Industry</a>
+                </p>
+                <p class="hover"><a href="">Insurance</a></p>
+                <p class="hover"><a href="">Life Science</a></p>
+                <p class="hover"><a href="">Logistik</a></p>
+                <p class="hover"><a href="">Media</a></p>
+                <p class="hover"><a href="">Medical Devices & technology</a></p>
+                <p class="hover"><a href="">Metals & Mining</a></p>
+              </div>
+
+              <div class="ml-3">
+                <p class="hover"><a href="">Oil & Gas</a></p>
+                <p class="hover">
+                  <a href="">Paper & Packaging</a>
+                </p>
+                <p class="hover"><a href="">Public Sector</a></p>
+                <p class="hover"><a href="">Rail</a></p>
+                <p class="hover"><a href="">Retail</a></p>
+                <p class="hover"><a href="">Telecommunication</a></p>
+                <p class="hover"><a href="">Travel</a></p>
+                <p class="hover"><a href="">Utilities</a></p>
+              </div>
             </div>
           </div>
-          <div>
-            Personal Excellence
+          <div class="dropdown">
+            <span>Job Portal</span>
             <i class="fa-solid fa-caret-down icon-color"></i>
-          </div>
-          <div>
-            Interim Management <i class="fa-solid fa-caret-down icon-color"></i>
-          </div>
-          <div>
-            Industries <i class="fa-solid fa-caret-down icon-color"></i>
-          </div>
-          <div>
-            Job Portal <i class="fa-solid fa-caret-down icon-color"></i>
+
+            <div class="dropdown-options">
+              <div class="hover border-bottom">
+                <a href="">Personal Execellence Jobs </a>
+              </div>
+              <div class="hover">
+                <a href="">Interim Management Projects </a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="menu-right">
-          <div>Contact <i class="fa-solid fa-user icon-color"></i></div>
+          <div>
+            <i class="fa-solid fa-user icon-color"></i>
+            <span class="ml-1">Contact</span>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="container">
+      <!-- Small Screen Navbar -->
+      <div class="navbar_small_screen close">
+        <div class="navbar_small_screen-row">
+          <div class="row justify-space-between">
+            <h2>Consulting</h2>
+            <i
+              class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar"
+            ></i>
+          </div>
+
+          <div class="mt-1 close">
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Strategy & Innovation</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover"><a href="">Strategy</a></p>
+                <p class="hover"><a href="">Innovation</a></p>
+                <p class="hover"><a href="">Merger & Aquisition</a></p>
+                <p class="hover"><a href="">Private Equity</a></p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Organization,People & Change</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover"><a href="">Coporate Transformation</a></p>
+                <p class="hover">
+                  <a href="">Organizational Change Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Digital Adoption</a>
+                </p>
+                <p class="hover">
+                  <a href="">New Work & Collaboration</a>
+                </p>
+                <p class="hover">
+                  <a href="">People Development & Training</a>
+                </p>
+                <p class="hover">
+                  <a href="">Human Resources</a>
+                </p>
+                <p class="hover">
+                  <a href="">Post merger integration & crave out</a>
+                </p>
+
+                <p class="hover">
+                  <a href="">Organizational redesign</a>
+                </p>
+                <p class="hover">
+                  <a href="">Outsourcing</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Sales, Service, Marketing & Price</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover">
+                  <a href="">Sales Performance Execellence</a>
+                </p>
+                <p class="hover">
+                  <a href="">Pricing & Commerical Execellence</a>
+                </p>
+                <p class="hover">
+                  <a href="">Customer Experience Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Customer Relationship Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Commerical Steering</a>
+                </p>
+                <p class="hover">
+                  <a href="">Data Driven Sales</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interative Digital Sales</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Production,Supply Chain, R&D und Procurement</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover">
+                  <a href="">Production</a>
+                </p>
+                <p class="hover">
+                  <a href="">Supply Chain Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">R&D and Product Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Procurement</a>
+                </p>
+                <p class="hover">
+                  <a href="">Digital Operations</a>
+                </p>
+                <p class="hover">
+                  <a href="">Working Capital Management</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Finance Transformation</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover">
+                  <a href="">CFO Pannel & Digital Insights</a>
+                </p>
+                <p class="hover">
+                  <a href="">CFO Stragtegy & Roadmap</a>
+                </p>
+                <p class="hover">
+                  <a href="">CFO Organization & Process</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Controlling, Performance Management, Risk & Compilance</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover">
+                  <a href="">Control Model & Control Logic</a>
+                </p>
+                <p class="hover">
+                  <a href="">Planning & Forecasting</a>
+                </p>
+                <p class="hover">
+                  <a href="">Management Reporting</a>
+                </p>
+                <p class="hover">
+                  <a href="">Operational Cost & Management Accounting</a>
+                </p>
+                <p class="hover">
+                  <a href="">Risk & Compilance</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Sustainability & Green</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover">
+                  <a href="">Decarbonization</a>
+                </p>
+                <p class="hover">
+                  <a href="">Hydrogen & Electrification</a>
+                </p>
+                <p class="hover">
+                  <a href="">Circular Economy</a>
+                </p>
+                <p class="hover">
+                  <a href="">ESG Strategy & Performance Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Regulatory Disclosure & Risk</a>
+                </p>
+                <p class="hover">
+                  <a href="">Organization & Governance</a>
+                </p>
+                <p class="hover">
+                  <a href="">Product Development & Commercialization</a>
+                </p>
+                <p class="hover">
+                  <a href="">Supply Chain & Procurement</a>
+                </p>
+                <p class="hover">
+                  <a href="">Decarbonized operations</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>IT,Digital, Data & Analytics</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover">
+                  <a href="">IT Management Consulting</a>
+                </p>
+                <p class="hover">
+                  <a href="">Intelligent Automation</a>
+                </p>
+                <p class="hover">
+                  <a href="">BI & Anaylatics</a>
+                </p>
+                <p class="hover">
+                  <a href="">Data Science & Steering Lab</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar_small_screen-row">
+          <div class="row justify-space-between">
+            <h2>Personal Execellence</h2>
+            <i
+              class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar"
+            ></i>
+          </div>
+
+          <div class="mt-1 close">
+            <div class="w-100">
+              <div class="row justify-space-between">
+                <h3>Fur Unternehmen</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover"><a href="">Ubersicht</a></p>
+                <p class="hover"><a href="">Executive Search</a></p>
+                <p class="hover"><a href="">Kandidatensuche</a></p>
+              </div>
+            </div>
+
+            <div class="w-100">
+              <div class="row justify-space-between">
+                <h3>Fur Bewerber</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover"><a href="">Ubersicht</a></p>
+                <p class="hover"><a href="">initiativbewerbung</a></p>
+                <p class="hover">
+                  <a href="">Executive Search fur Fuhrungskrafte</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar_small_screen-row">
+          <div class="row justify-space-between">
+            <h2>Interim Management</h2>
+            <i
+              class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar"
+            ></i>
+          </div>
+
+          <div class="mt-1 close">
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>General Management</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover"><a href="">Interim CEO</a></p>
+                <p class="hover"><a href="">Interim COO</a></p>
+                <p class="hover"><a href="">Interim CDO</a></p>
+                <p class="hover"><a href="">Interim CRO</a></p>
+                <p class="hover"><a href="">Interim CFO</a></p>
+                <p class="hover"><a href="">Interim Legal & Compilance</a></p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Operations</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover"><a href="">Interim Manager Purchasing</a></p>
+                <p class="hover">
+                  <a href="">Interim Manager Supply Chain Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager IT Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager Distribution & Management</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager Quality Management</a>
+                </p>
+                <p class="hover">
+                  <a href=""
+                    >Interim Manager Produktionsleitung & Werksleitung</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Peronal (HR)</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover"><a href="">Interim HR Management</a></p>
+                <p class="hover">
+                  <a href="">Interim Recruitment</a>
+                </p>
+                <p class="hover">
+                  <a href="">HR Bussiness Patner</a>
+                </p>
+                <p class="hover">
+                  <a href="">HR-development & Coaching</a>
+                </p>
+                <p class="hover">
+                  <a href="">HR Strategies & Consulting</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager Payroll</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="w-100 mt-1">
+              <div class="row justify-space-between">
+                <h3>Finance</h3>
+                <i
+                  class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar ml-1"
+                ></i>
+              </div>
+              <div class="close level2">
+                <p class="hover">
+                  <a href="">Interim Management Controlling</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Recruitment</a>
+                </p>
+                <p class="hover">
+                  <a href="">HR Bussiness Patner</a>
+                </p>
+                <p class="hover">
+                  <a href="">HR-development & Coaching</a>
+                </p>
+                <p class="hover">
+                  <a href="">HR Strategies & Consulting</a>
+                </p>
+                <p class="hover">
+                  <a href="">Interim Manager Payroll</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar_small_screen-row">
+          <div class="row justify-space-between">
+            <h2>Industries</h2>
+            <i
+              class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar"
+            ></i>
+          </div>
+          <div class="mt-1 close">
+            <div class="row border-bottom justify-space-between">
+              <div style="width: 50%">
+                <img
+                  src="images/expertise_image.jpg"
+                  alt="Consulting Image"
+                  style="width: 100%"
+                />
+                <p class="mt-2">
+                  We support companies and top executives with extensive
+                  competence in business models, organizational structures,
+                  processes and systems to successfully align their
+                  organizations for the future – across whole companies
+                </p>
+
+                <h3 class="mb-2 mt-2 row">
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                  <a href="" class="ml-1">Explore More</a>
+                </h3>
+              </div>
+
+              <div style="width: 40%" class="ml-1">
+                <p class="hover"><a href="">Automotive</a></p>
+                <p class="hover"><a href="">Aviation</a></p>
+                <p class="hover">
+                  <a href="">Banken und Finanzdienstleister</a>
+                </p>
+                <p class="hover">
+                  <a href="">Building & Constructions</a>
+                </p>
+
+                <p class="hover">
+                  <a href="">Chemicals</a>
+                </p>
+
+                <p class="hover">
+                  <a href="">Consumer Electronics & High Tech</a>
+                </p>
+
+                <p class="hover">
+                  <a href="">Consumer Goods</a>
+                </p>
+
+                <p class="hover">
+                  <a href="">Health Care</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="row justify-space-between">
+              <div class="mt-1" style="width: 60%">
+                <p class="hover"><a href="">Industrial Services</a></p>
+                <p class="hover">
+                  <a href="">Industrial Goods & Machine Industry</a>
+                </p>
+                <p class="hover"><a href="">Insurance</a></p>
+                <p class="hover"><a href="">Life Science</a></p>
+                <p class="hover"><a href="">Logistik</a></p>
+                <p class="hover"><a href="">Media</a></p>
+                <p class="hover"><a href="">Medical Devices & technology</a></p>
+                <p class="hover"><a href="">Metals & Mining</a></p>
+              </div>
+
+              <div class="mt-1" style="width: 40%">
+                <p class="hover"><a href="">Oil & Gas</a></p>
+                <p class="hover">
+                  <a href="">Paper & Packaging</a>
+                </p>
+                <p class="hover"><a href="">Public Sector</a></p>
+                <p class="hover"><a href="">Rail</a></p>
+                <p class="hover"><a href="">Retail</a></p>
+                <p class="hover"><a href="">Telecommunication</a></p>
+                <p class="hover"><a href="">Travel</a></p>
+                <p class="hover"><a href="">Utilities</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar_small_screen-row">
+          <div class="row justify-space-between">
+            <h2>Job Portal</h2>
+            <i
+              class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar"
+            ></i>
+          </div>
+          <div class="mt-1 close">
+            <div class="hover">
+              <a href="">Personal Execellence Jobs </a>
+            </div>
+            <div class="hover">
+              <a href="">Interim Management Projects </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="main-content"></div>
       <!-- Overlay -->
       <div class="overlay"></div>
