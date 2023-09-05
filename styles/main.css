@@ -7,7 +7,12 @@
 }
 
 :root {
-  --border-color: #aaaaaa; /* Replace with your desired border color */
+  --border-color: rgba(
+    170,
+    170,
+    170,
+    0.6
+  ); /* Replace with your desired border color */
   --icon-color: #9c9b9b; /* Replace with your desired icon color */
   --btn-color: #58a09a;
   --primary-color: #58a09a; /* Replace with your desired button color */
@@ -17,13 +22,14 @@
 a {
   text-decoration: none;
   color: inherit;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
   font-family: "Quicksand", "Avenir Next LT Pro", sans-serif;
   background: #eee;
   width: 100vw;
+  font-size: 16px;
   overflow: hidden;
 }
 
@@ -79,13 +85,14 @@ body {
 
 .menu-top__right > div {
   margin-left: 10px;
+  width: calc(max-content + 10px);
   padding: 5px;
   cursor: pointer;
 }
 
-.menu-top__right > div > span:hover {
-  padding: 0px;
-  background: var(--border-color);
+.menu-top__right > div:hover {
+  /* padding: 0px; */
+  background: #dfdfdf;
 }
 
 /* Search bar */
@@ -330,11 +337,11 @@ body {
   z-index: 1000;
   padding: 10px;
   /* border: 1px solid var(--border-color); */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
   /* max-width: 250px; */
   width: 100%;
   left: -1px;
-  min-width: 200px;
+  min-width: 250px;
 }
 
 .dropdown > .dropdown-options a {
@@ -395,6 +402,14 @@ body {
 
 .dropdown-flex-hovered > div {
   flex: 1;
+}
+
+.dropdown > .about_dropdown {
+  padding: 30px;
+}
+
+.about_dropdown > a:not(:last-of-type) {
+  padding: 10px 0px;
 }
 
 /* Small Screen Navbar */
