@@ -7,10 +7,11 @@
 }
 
 :root {
-  --border-color: #ddd; /* Replace with your desired border color */
+  --border-color: #aaaaaa; /* Replace with your desired border color */
   --icon-color: #9c9b9b; /* Replace with your desired icon color */
   --btn-color: #58a09a;
   --primary-color: #58a09a; /* Replace with your desired button color */
+  --navbar_small_screen: #f5f5f5;
 }
 
 a {
@@ -23,7 +24,7 @@ body {
   font-family: "Quicksand", "Avenir Next LT Pro", sans-serif;
   background: #eee;
   width: 100vw;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 /*  Main menu */
@@ -90,7 +91,7 @@ body {
 
 .menu-bottom {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 0px;
   padding: 0px 20px;
 }
@@ -122,7 +123,7 @@ body {
   width: 100%;
   height: 80vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .main-content {
   width: 100%;
@@ -161,20 +162,14 @@ body {
 }
 
 .hover {
-  padding: 9px 18px 9px 10px;
+  padding: 9px 18px 9px 0px;
 }
 
 .hover:hover {
   color: var(--primary-color);
 }
 
-.d-inline {
-  display: inline-block;
-}
-
-.d-flex {
-  display: flex;
-}
+/*  Margin Classes */
 .mt-1 {
   margin-top: 10px;
 }
@@ -239,6 +234,7 @@ body {
   margin-bottom: 40px;
 }
 
+/*  Flex classes */
 .row {
   display: flex;
   align-items: center;
@@ -248,6 +244,15 @@ body {
   justify-content: space-between;
 }
 
+.d-inline {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/* Width classess */
 .w-65 {
   width: 65%;
 }
@@ -256,13 +261,17 @@ body {
   width: 50vw;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .image-size {
   object-fit: cover;
   width: 250px;
   height: 150px;
 }
 .border-gray {
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .icon-color {
@@ -290,7 +299,7 @@ body {
   display: none;
   z-index: 1000;
   padding: 10px;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   /* max-width: 250px; */
   width: 100%;
@@ -360,4 +369,133 @@ body {
 
 .dropdown-flex-hovered > div {
   flex: 1;
+}
+
+/* Small Screen Navbar */
+.navbar_small_screen {
+  display: none;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.close {
+  display: none;
+}
+.open {
+  display: block !important;
+  animation: opacityAnimation 0.3s ease-in;
+}
+
+/* Animation for the opening of the tabs of small screen navbar */
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Query for screen that has height greater then 700px */
+@media (min-height: 800px) {
+  .main-menu {
+    height: 15vh;
+  }
+
+  .menu-top {
+    padding-top: 15px;
+  }
+  .container {
+    height: 85vh;
+  }
+}
+
+/*  For screens less then 1024px */
+@media (max-width: 1024px) {
+  .main-menu {
+    padding: 10px;
+    height: 10vh;
+  }
+
+  .container {
+    height: 90vh;
+  }
+  .main-menu > .menu-bottom {
+    display: none;
+  }
+
+  /* Small Navbar */
+  .navbar_small_screen {
+    display: block;
+    /* position: relative; */
+    z-index: 1050;
+    background-color: var(--navbar_small_screen);
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    padding: 0px;
+    overflow: scroll;
+  }
+
+  .navbar_small_screen-row {
+    padding: 10px;
+  }
+
+  .navbar_small_screen-row:not(:last-of-type) {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .fa-plus_small_navbar:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+
+  .main-menu > .menu-top__left {
+    flex: 0.3;
+  }
+
+  .main-menu > .menu-top__right {
+    flex: 0.7;
+  }
+
+  .menu-top__left > .logoDiv {
+    width: 140px;
+    margin: 0px;
+  }
+
+  .hover {
+    padding: 0px 0px 10px 0px !important;
+  }
+
+  .navbar_small_screen h2 {
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .navbar_small_screen h3 {
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .navbar_small_screen .row {
+    align-items: flex-start;
+  }
+
+  .navbar_small_screen a,
+  .navbar_small_screen p {
+    font-size: 16px;
+  }
+
+  .d-none_small_screen {
+    display: none;
+  }
+
+  .fontSize_smallScreen {
+    font-size: 16px !important;
+  }
 }

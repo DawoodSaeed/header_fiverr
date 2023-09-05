@@ -116,9 +116,49 @@ const menuTitleChange = () => {
       console.log(aTag);
     });
     itm.addEventListener("mouseleave", () => {
-      hoverTitle.textContent = "GLOBAL";
+      hoverTitle.textContent = "Global";
     });
   });
 };
 
 menuTitleChange();
+
+//  Logic for small navbar open & close
+const navbarElements = document.querySelectorAll(".fa-plus_small_navbar");
+
+const closeAllTabs = function () {
+  navbarElements.forEach((navbarElement) => {
+    const parentNode = navbarElement.parentNode;
+    const siblingNode = parentNode.nextSibling.nextSibling;
+
+    if (siblingNode && siblingNode.classList.contains("open")) {
+      siblingNode.classList.remove("open");
+      siblingNode.classList.add("close");
+    }
+  });
+};
+
+navbarElements.forEach((navbarElement) => {
+  const parentNode = navbarElement.parentNode;
+  const siblingNode = parentNode.nextSibling.nextSibling;
+
+  if (siblingNode) {
+    navbarElement.addEventListener(
+      "click",
+      function () {
+        // Close all the other tabs first
+        if (siblingNode.classList.contains("close")) {
+          if (!siblingNode.classList.contains("level2")) {
+            closeAllTabs();
+          }
+          siblingNode.classList.remove("close");
+          siblingNode.classList.add("open");
+        } else {
+          siblingNode.classList.remove("open");
+          siblingNode.classList.add("close");
+        }
+      },
+      false
+    );
+  }
+});
