@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mega Menu 1</title>
+
+    <!-- Font Awesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- stylesheet file -->
+    <link rel="stylesheet" href="../styles/main.css" />
+
+    <!-- Script -->
+    <script src="../scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div class="main-menu">
+      <div class="menu-top">
+        <!-- Logo, Title, about us, loations, de , search icon, login Btn -->
+        <div class="menu-top__left">
+          <div class="logoDiv">
+            <!-- <h1>CONSULTING</h1> -->
+            <img src="../images/logo.jpeg" alt="Logo Image" class="logoImage" />
+          </div>
+          <div class="d-none_small_screen">
+            <p class="hover-title">Global</p>
+          </div>
+        </div>
+
+        <div class="menu-top__right">
+          <div class="border-gray dropdown d-none_small_screen">
+            <span
+              >About Us <i class="fa-solid fa-caret-down icon-color"></i
+            ></span>
+
+            <div class="dropdown-options">
+              <a href="">Option # 1 </a>
+              <a href="">Option # 2 </a>
+              <a href="">Option # 3 </a>
+            </div>
+          </div>
+          <div class="border-gray d-none_small_screen">
+            <span>Locations</span>
+          </div>
+          <div class="border-gray d-none_small_screen"><span>DE</span></div>
+          <div class="border-gray searchBtn">
+            <span><i class="fa-solid fa-magnifying-glass icon-color"></i></span>
+          </div>
+          <div class="btn-primary">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <span class="fontSize_smallScreen"> LOGIN </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+
+      <div style="width: 100%; justify-content: center" class="searchRow close">
+        <div class="searchBox">
+          <input type="text" placeholder="Search" class="searchBoxInput" />
+
+          <i class="fa-solid fa-magnifying-glass searchBoxIcon"></i>
+        </div>
+      </div>
+
+      <!-- Small screen navbar toggler -->
+      <div class="menu-bottom_smallScreen mt-2">
+        <i class="fa-solid fa-bars"></i>
+        <div class="ml-1">
+          <p class="small_hover-title">Global</p>
+        </div>
+      </div>
+
+      <div class="menu-bottom">
+        <div class="menu-left">
+          <div class="dropdown">
+            <span>Account</span>
+            <i class="fa-solid fa-caret-down icon-color"></i>
+
+            <div class="dropdown-options">
+              <div class="hover border-bottom">
+                <a href="">Overview </a>
+              </div>
+              <div class="hover border-bottom">
+                <a href="">Personal Data & Availability</a>
+              </div>
+              <div class="hover border-bottom">
+                <a href="">Training</a>
+              </div>
+              <div class="hover border-bottom">
+                <a href="">Career</a>
+              </div>
+              <div class="hover border-bottom">
+                <a href="">Professional focus</a>
+              </div>
+              <div class="hover border-bottom">
+                <a href="">Industry experiences</a>
+              </div>
+              <div class="hover border-bottom">
+                <a href="">Languages ​​and stays abroad</a>
+              </div>
+              <div class="hover border-bottom">
+                <a href="">Interests</a>
+              </div>
+              <div class="hover border-bottom">
+                <a href="">Upload documents</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span><a href="#">Job</a></span>
+          </div>
+        </div>
+        <div class="menu-right">
+          <div>
+            <i class="fa-solid fa-user icon-color"></i>
+            <span class="ml-1">Contact</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Small Screen Navbar -->
+      <div class="navbar_small_screen">
+        <div class="navbar_small_screen-row">
+          <div class="row justify-space-between">
+            <h2>Accounts</h2>
+            <i
+              class="fa-solid fa-chevron-down icon-color fa-plus_small_navbar"
+            ></i>
+          </div>
+          <div class="mt-1 close">
+            <div class="hover">
+              <a href="">Overview </a>
+            </div>
+            <div class="hover">
+              <a href="">Personal Data & Availability </a>
+            </div>
+            <div class="hover">
+              <a href="">Trainingy </a>
+            </div>
+            <div class="hover">
+              <a href="">Career </a>
+            </div>
+            <div class="hover">
+              <a href="">Professional focus </a>
+            </div>
+            <div class="hover">
+              <a href="">Industry experiences </a>
+            </div>
+            <div class="hover">
+              <a href="">Languages ​​and stays abroad </a>
+            </div>
+            <div class="hover">
+              <a href="">Interests </a>
+            </div>
+            <div class="hover">
+              <a href="">Upload documents </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar_small_screen-row">
+          <a href="#">Jobs</a>
+        </div>
+      </div>
+      <div class="main-content"></div>
+      <!-- Overlay -->
+      <div class="overlay"></div>
+    </div>
+  </body>
+</html>

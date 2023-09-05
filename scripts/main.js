@@ -73,36 +73,37 @@ const dropdownSelectedOptions = {
   ],
 };
 
-for (const [key, value] of Object.entries(dropdownSelectedOptions)) {
-  const row = document.createElement("div");
-  const p = document.createElement("a");
-  const i = document.createElement("i");
-  i.classList.add("fa-solid", "fa-chevron-right", "icon-color");
-  p.textContent = key;
+if (dropdownOptions) {
+  for (const [key, value] of Object.entries(dropdownSelectedOptions)) {
+    const row = document.createElement("div");
+    const p = document.createElement("a");
+    const i = document.createElement("i");
+    i.classList.add("fa-solid", "fa-chevron-right", "icon-color");
+    p.textContent = key;
 
-  row.append(p);
-  row.append(i);
-  row.classList.add("row", "hover", "justify-space-between");
+    row.append(p);
+    row.append(i);
+    row.classList.add("row", "hover", "justify-space-between");
 
-  dropdownOptions.append(row);
+    dropdownOptions.append(row);
 
-  //   Add an event listener on the row;
-  row.addEventListener("mouseover", () => {
-    dropdownOptionThird.innerHTML = "";
-    value.forEach((option) => {
-      // Clears Everything first;
-      const row = document.createElement("div");
-      const a = document.createElement("a");
-      row.classList.add("hover");
-      a.textContent = option;
-      a.classList.add();
-      row.append(a);
-      dropdownOptionThird.append(row);
-      menuTitleChange();
+    //   Add an event listener on the row;
+    row.addEventListener("mouseover", () => {
+      dropdownOptionThird.innerHTML = "";
+      value.forEach((option) => {
+        // Clears Everything first;
+        const row = document.createElement("div");
+        const a = document.createElement("a");
+        row.classList.add("hover");
+        a.textContent = option;
+        a.classList.add();
+        row.append(a);
+        dropdownOptionThird.append(row);
+        menuTitleChange();
+      });
     });
-  });
+  }
 }
-
 //  To change the title accordingly,
 // When something is hovered I want to change the title of the menu
 
@@ -140,30 +141,32 @@ const closeAllTabs = function () {
   });
 };
 
-navbarElements.forEach((navbarElement) => {
-  const parentNode = navbarElement.parentNode;
-  const siblingNode = parentNode.nextSibling.nextSibling;
+if (navbarElements.length > 0) {
+  navbarElements.forEach((navbarElement) => {
+    const parentNode = navbarElement.parentNode;
+    const siblingNode = parentNode.nextSibling.nextSibling;
 
-  if (siblingNode) {
-    navbarElement.addEventListener(
-      "click",
-      function () {
-        // Close all the other tabs first
-        if (siblingNode.classList.contains("close")) {
-          if (!siblingNode.classList.contains("level2")) {
-            closeAllTabs();
+    if (siblingNode) {
+      navbarElement.addEventListener(
+        "click",
+        function () {
+          // Close all the other tabs first
+          if (siblingNode.classList.contains("close")) {
+            if (!siblingNode.classList.contains("level2")) {
+              closeAllTabs();
+            }
+            siblingNode.classList.remove("close");
+            siblingNode.classList.add("open");
+          } else {
+            siblingNode.classList.remove("open");
+            siblingNode.classList.add("close");
           }
-          siblingNode.classList.remove("close");
-          siblingNode.classList.add("open");
-        } else {
-          siblingNode.classList.remove("open");
-          siblingNode.classList.add("close");
-        }
-      },
-      false
-    );
-  }
-});
+        },
+        false
+      );
+    }
+  });
+}
 
 const togglingFn = (element, add, remove) => {
   element.classList.remove(remove);
@@ -171,22 +174,26 @@ const togglingFn = (element, add, remove) => {
 };
 
 // Small Screen navbar logic for toggling
-const toggleBtn = document.querySelector(".menu-bottom_smallScreen")
-  .children[0];
+const toggleBtnParent = document.querySelector(".menu-bottom_smallScreen");
+let toggleBtn;
+if (toggleBtnParent) {
+  toggleBtn = toggleBtnParent.children[0];
+}
 const smallScreenNavbar = document.querySelector(".navbar_small_screen");
 
-toggleBtn.addEventListener("click", () => {
-  check = smallScreenNavbar.classList.contains("close");
-  if (check) {
-    menuTitleChange(true);
-    togglingFn(toggleBtn, "fa-xmark", "fa-bars");
-    togglingFn(smallScreenNavbar, "open", "close");
-  } else {
-
-    togglingFn(toggleBtn, "fa-bars", "fa-xmark");
-    togglingFn(smallScreenNavbar, "close", "open");
-  }
-});
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    check = smallScreenNavbar.classList.contains("close");
+    if (check) {
+      menuTitleChange(true);
+      togglingFn(toggleBtn, "fa-xmark", "fa-bars");
+      togglingFn(smallScreenNavbar, "open", "close");
+    } else {
+      togglingFn(toggleBtn, "fa-bars", "fa-xmark");
+      togglingFn(smallScreenNavbar, "close", "open");
+    }
+  });
+}
 
 // Function to increase the height by 10vh
 const increaseHeight = (element) => {
@@ -218,15 +225,15 @@ const reduceHeight = (element) => {
 
 const mainMenu = document.querySelector(".main-menu");
 const searchBtn = document.querySelector(".searchBtn");
-const searchRow = document.querySelector(".searchRow")
+const searchRow = document.querySelector(".searchRow");
 
 searchBtn.addEventListener("click", () => {
   const check = searchRow.classList.contains("close");
   if (check) {
     togglingFn(searchRow, "open_flex", "close");
     increaseHeight(mainMenu);
-  }else{
-    togglingFn(searchRow, "close","open_flex");
+  } else {
+    togglingFn(searchRow, "close", "open_flex");
     reduceHeight(mainMenu);
   }
 });
