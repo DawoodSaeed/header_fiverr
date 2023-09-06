@@ -373,7 +373,11 @@ body {
   color: var(--primary-color);
 }
 
-menutwo_registration_dropdown a {
+.menutwo_registration_dropdown {
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.menutwo_registration_dropdown a {
   color: #000;
 }
 
