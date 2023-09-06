@@ -249,6 +249,28 @@ const dropdownTogglingFn = (dropdowns, flex = false) => {
     dropdown.addEventListener("click", (event) => {
       const dropdownOptions = dropdown.querySelector(".dropdown-options");
 
+      // Close all open dropdowns
+      dropdownMain.forEach((otherDropdown) => {
+        if (otherDropdown !== dropdown) {
+          const otherDropdownOptions =
+            otherDropdown.querySelector(".dropdown-options");
+          if (otherDropdownOptions) {
+            togglingFn(otherDropdownOptions, "close", "open");
+          }
+        }
+      });
+
+      dropdownFull.forEach((otherDropdown) => {
+        if (otherDropdown !== dropdown) {
+          const otherDropdownOptions =
+            otherDropdown.querySelector(".dropdown-options");
+          if (otherDropdownOptions) {
+            togglingFn(otherDropdownOptions, "close", "open_flex");
+          }
+        }
+      });
+
+      // Toggle the clicked dropdown
       if (dropdownOptions && dropdownOptions.classList.contains("close")) {
         togglingFn(dropdownOptions, open, "close");
       } else {
