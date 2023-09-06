@@ -359,8 +359,8 @@ body {
 
 .dropdown > .registration_dropdown {
   color: #000;
-  min-width: 300px !important;
-  left: -120%;
+  min-width: 430px;
+  left: -190%;
   padding: 30px;
   border: 1px solid var(--border-color);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -422,7 +422,7 @@ body {
 }
 .dropdown-options__w100-second {
   padding-right: 15px;
-  border-right: 2px dashed var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 
 .dropdown-options__w100-third {
@@ -439,7 +439,7 @@ body {
 
 /* Personal Excellence Dropdown */
 #dropdown_personExcellence .w-35 {
-  width: 35vw;
+  width: 40vw;
 }
 
 #dropdown_personExcellence .p-40 {
@@ -463,7 +463,7 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.about_dropdown > a:not(:last-of-type) {
+.about_dropdown > a {
   padding: 10px 0px;
 }
 
@@ -605,5 +605,13 @@ body {
 
   .searchBox {
     width: 80%;
+  }
+}
+
+/*  for small scree */
+@media (max-width: 400px) {
+  .dropdown > .registration_dropdown {
+    min-width: 370px !important;
+    left: -150% !important;
   }
 }
