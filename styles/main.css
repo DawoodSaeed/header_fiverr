@@ -19,7 +19,8 @@
   --navbar_small_screen: #f5f5f5;
 }
 
-a {
+a,
+h3 {
   text-decoration: none;
   color: inherit;
   font-size: 16px;
