@@ -624,3 +624,18 @@ body {
     left: -150% !important;
   }
 }
+
+/* Second Page */
+
+.pageTwo__title {
+  font-size: 24px;
+}
+
+.pageTwo__title-italic {
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+.hover-title__pageTwo {
+  font-size: 19px;
+}
