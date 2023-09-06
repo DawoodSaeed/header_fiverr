@@ -39,7 +39,7 @@
               >About Us <i class="fa-solid fa-caret-down icon-color"></i
             ></span>
 
-            <div class="dropdown-options about_dropdown">
+            <div class="dropdown-options about_dropdown close">
               <a href="">Unternehmen</a>
               <a href="">Ethik und Compilance </a>
               <a href="">Menschenrechte </a>
@@ -53,9 +53,28 @@
           <div class="border-gray searchBtn">
             <span><i class="fa-solid fa-magnifying-glass icon-color"></i></span>
           </div>
-          <div class="btn-primary">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
-            <span class="fontSize_smallScreen"> LOGIN </span>
+          <div class="btn-primary dropdown">
+            <span class="fontSize_smallScreen">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i> Registration
+            </span>
+
+            <div class="dropdown-options registration_dropdown close">
+              <p>Wählen Sie Ihren Bereich</p>
+
+              <div class="registration_dropdown-subitems mt-2">
+                <h3>Personal Executive​</h3>
+                <a href="">Applicant (Registration)</a>
+                <a href="">Company (Registration) </a>
+                <a href="">Login </a>
+              </div>
+
+              <div class="registration_dropdown-subitems">
+                <h3>Interim Management​</h3>
+                <a href="">Interim Manager (Registration)</a>
+                <a href="">Company (Registration) </a>
+                <a href="">Login </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -82,7 +101,7 @@
             <span>Consulting</span>
             <i class="fa-solid fa-chevron-down icon-color"></i>
 
-            <div class="dropdown-options dropdown-flex-hovered w-50">
+            <div class="dropdown-options dropdown-flex-hovered w-50 close">
               <div class="dropdown-options__w100-first">
                 <img
                   src="images/expertise_image.jpg"
@@ -105,32 +124,34 @@
               <div class="dropdown-options__w100-third"></div>
             </div>
           </div>
-          <div class="dropdown">
+          <div class="dropdown" id="dropdown_personExcellence">
             <span>Personal Excellence</span>
             <i class="fa-solid fa-chevron-down icon-color"></i>
 
-            <div class="dropdown-options dropdown-flex-hovered w-50">
-              <div class="ml-3">
-                <h3 class="border-bottom">Fur Unternehmen</h3>
-                <p class="hover"><a href="">Ubersicht</a></p>
-                <p class="hover"><a href="">Executive Search</a></p>
-                <p class="hover"><a href="">Kandidatensuche</a></p>
-              </div>
+            <div class="dropdown-options w-35 p-40 close">
+              <div class="row justify-space-between">
+                <div class="ml-3">
+                  <h3 class="border-bottom">Fur Unternehmen</h3>
+                  <p class="hover"><a href="">Ubersicht</a></p>
+                  <p class="hover"><a href="">Executive Search</a></p>
+                  <p class="hover"><a href="">Kandidatensuche</a></p>
+                </div>
 
-              <div class="ml-3">
-                <h3 class="border-bottom">Fur Bewerber</h3>
-                <p class="hover"><a href="">Ubersicht</a></p>
-                <p class="hover"><a href="">initiativbewerbung</a></p>
-                <p class="hover">
-                  <a href="">Executive Search fur Fuhrungskrafte</a>
-                </p>
+                <div class="ml-3">
+                  <h3 class="border-bottom">Fur Bewerber</h3>
+                  <p class="hover"><a href="">Ubersicht</a></p>
+                  <p class="hover"><a href="">initiativbewerbung</a></p>
+                  <p class="hover">
+                    <a href="">Executive Search fur Fuhrungskrafte</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div class="dropdown_full">
             <span>Interim Management</span>
             <i class="fa-solid fa-chevron-down icon-color"></i>
-            <div class="dropdown-options dropdown-flex-hovered w-50">
+            <div class="dropdown-options dropdown-flex-hovered w-50 close">
               <div class="ml-3">
                 <h3 class="border-bottom">General Management</h3>
                 <p class="hover"><a href="">Interim CEO</a></p>
@@ -199,7 +220,7 @@
           <div class="dropdown_full">
             <span>Industries</span>
             <i class="fa-solid fa-chevron-down icon-color"></i>
-            <div class="dropdown-options dropdown-flex-hovered">
+            <div class="dropdown-options dropdown-flex-hovered close">
               <div class="ml-3" style="flex: 1.5">
                 <img
                   src="images/expertise_image.jpg"
@@ -277,7 +298,7 @@
             <span>Job Portal</span>
             <i class="fa-solid fa-chevron-down icon-color"></i>
 
-            <div class="dropdown-options">
+            <div class="dropdown-options close">
               <div class="hover border-bottom">
                 <a href="">Personal Execellence Jobs </a>
               </div>

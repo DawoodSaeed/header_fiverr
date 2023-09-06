@@ -237,3 +237,36 @@ searchBtn.addEventListener("click", () => {
     reduceHeight(mainMenu);
   }
 });
+
+// Dropdown toggling (Desktop Screen)
+const mainContainer = document.querySelector(".container");
+
+const dropdownTogglingFn = (dropdowns, flex = false) => {
+  const open = flex ? "open_flex" : "open";
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", () => {
+      const dropdownOptions = dropdown.querySelector(".dropdown-options");
+      if (dropdownOptions && dropdownOptions.classList.contains("close")) {
+        togglingFn(dropdownOptions, open, "close");
+      } else {
+        togglingFn(dropdownOptions, "close", open);
+      }
+    });
+  });
+};
+
+
+
+const dropdownCloseAll = (element) => {};
+
+
+
+const dropdownMain = document.querySelectorAll(".dropdown");
+const dropdownFull = document.querySelectorAll(".dropdown_full");
+
+if (dropdownMain) {
+  dropdownTogglingFn(dropdownMain);
+}
+if (dropdownFull) {
+  dropdownTogglingFn(dropdownFull, true);
+}

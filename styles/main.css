@@ -90,7 +90,7 @@ body {
   cursor: pointer;
 }
 
-.menu-top__right > div:hover {
+.menu-top__right > div:not(:last-of-type):hover {
   /* padding: 0px; */
   background: #dfdfdf;
 }
@@ -143,9 +143,12 @@ body {
   color: var(--primary-color);
 }
 
+.menu-left > div {
+  cursor: pointer;
+}
+
 .menu-left > div:not(:first-of-type) {
   margin-left: 25px;
-  cursor: pointer;
 }
 
 .menu-right {
@@ -196,6 +199,10 @@ body {
 
 .border-bottom {
   border-bottom: 1px solid var(--border-color);
+}
+
+.hover-title {
+  font-size: 1.5rem;
 }
 
 .hover {
@@ -313,6 +320,8 @@ body {
 
 .icon-color {
   color: var(--icon-color);
+  -webkit-text-stroke: 0.5px white;
+  font-size: 1rem;
 }
 
 .btn-primary {
@@ -344,6 +353,30 @@ body {
   min-width: 250px;
 }
 
+.dropdown > .registration_dropdown {
+  color: #000;
+  min-width: 300px !important;
+  left: -190%;
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown > .registration_dropdown a,
+.dropdown > .registration_dropdown h3 {
+  color: #000;
+  padding: 10px 0px;
+  font-size: 16px;
+}
+
+.dropdown > .registration_dropdown a:hover {
+  color: var(--primary-color);
+}
+
+menutwo_registration_dropdown a {
+  color: #000;
+}
+
 .dropdown > .dropdown-options a {
   transition: all 0.2s ease-out;
   display: block;
@@ -359,9 +392,9 @@ body {
 }
 
 /* When someone hover over the dropdown the dropdown options appears */
-.dropdown:hover > .dropdown-options {
+/* .dropdown:hover > .dropdown-options {
   display: block;
-}
+} */
 
 /* Large Dropdown */
 
@@ -372,9 +405,9 @@ body {
   padding: 10px 40px;
 }
 
-.dropdown_w100:hover > .dropdown-options__w100 {
+/* .dropdown_w100:hover > .dropdown-options__w100 {
   display: flex;
-}
+} */
 
 .dropdown-options__w100 > div {
   flex: 1;
@@ -390,12 +423,24 @@ body {
 
 /* This will make the dropdown be flex when hovered over */
 
-.dropdown_full:hover > .dropdown-flex-hovered,
-.dropdown:hover > .dropdown-flex-hovered {
+/* .dropdown_full:hover > .dropdown-flex-hovered, */
+/* .dropdown:hover > .dropdown-flex-hovered {
   display: flex !important;
+  padding: 40px;
+} */
+
+/* Personal Excellence Dropdown */
+#dropdown_personExcellence .w-35 {
+  width: 35vw;
+}
+
+#dropdown_personExcellence .p-40 {
   padding: 40px;
 }
 
+.dropdown_full > .dropdown-options {
+  padding: 40px;
+}
 .dropdown > .dropdown-flex-hovered {
   width: 60vw;
 }
@@ -465,11 +510,11 @@ body {
 @media (max-width: 1024px) {
   .main-menu {
     padding: 10px;
-    height: 20vh;
+    height: 18vh;
   }
 
   .container {
-    height: 80vh;
+    height: 82vh;
   }
   .main-menu > .menu-bottom {
     display: none;
