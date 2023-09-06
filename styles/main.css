@@ -602,4 +602,8 @@ body {
   .menu-bottom_smallScreen {
     display: flex;
   }
+
+  .searchBox {
+    width: 80%;
+  }
 }
